@@ -40,6 +40,8 @@ public class PesquisaNumero extends HttpServlet {
              Criteria criteria = sessao.createCriteria(Veiculo.class);
              
              criteria.add(Restrictions.eq("numero",request.getParameter("numero1")));
+            
+              
           List<Veiculo> resultado =  criteria.list();
             
           for (Veiculo c : resultado){
